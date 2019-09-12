@@ -36,4 +36,14 @@ $client = new Client();
 ```
 ![alt text](https://github.com/amalinafz/assmnt/blob/master/public/images/Reject.png "Rejected")
 
+## Output
+
+![alt text](https://github.com/amalinafz/assmnt/blob/master/public/images/4.png "Main")
+
+![alt text](https://github.com/amalinafz/assmnt/blob/master/public/images/5.png "Kijang_Emas")
+
+![alt text](https://github.com/amalinafz/assmnt/blob/master/public/images/6.png "OPR")
+
+![alt text](https://github.com/amalinafz/assmnt/blob/master/public/images/7.png "kl-usd-reference-rate")
+
 
