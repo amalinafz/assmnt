@@ -38,11 +38,19 @@ $client = new Client();
 
 ## Output
 
+1. Main
+
 ![alt text](https://github.com/amalinafz/assmnt/blob/master/public/images/4.png "Main")
+
+2. Kijang_Emas
 
 ![alt text](https://github.com/amalinafz/assmnt/blob/master/public/images/5.png "Kijang_Emas")
 
+3. OPR
+
 ![alt text](https://github.com/amalinafz/assmnt/blob/master/public/images/6.png "OPR")
+
+4. KL-USD-Reference-Rate
 
 ![alt text](https://github.com/amalinafz/assmnt/blob/master/public/images/7.png "kl-usd-reference-rate")
 
