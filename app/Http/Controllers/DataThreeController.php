@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\DataThree;
 use Illuminate\Http\Request;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client; 
+use GuzzleHttp\Psr7;
 
 class DataThreeController extends Controller
 {
@@ -14,7 +17,14 @@ class DataThreeController extends Controller
      */
     public function index()
     {
-        //
+        $client = new Client();
+        $result = $client->get('https://raw.githubusercontent.com/amalinafz/assmnt/master/database/data/kl-usd-reference-rate.json');
+        if ($result->getStatusCode() == 200) { // 200 OK
+        $data = $result->getBody()->getContents();
+        }
+
+        dd($data);
+        return view('Data3', compact('data'));
     }
 
     /**

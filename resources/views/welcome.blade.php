@@ -84,9 +84,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="/DataOne">DataOne</a>
-                    <a href="/Data2">DataTwo</a>
-                    <a href="https://laravel-news.com">Data3</a>
+                    <a href="/Kijang_Emas">Kijang Emas</a>
+                    <a href="/OPR">OPR</a>
+                    <a href="/kl_usd_reference_rate">KL USD Reference Rate</a>
 
                 </div>
             </div>

@@ -21,6 +21,7 @@ Route::get('/', function () {
 //                   ->header('Content-Type', 'text/plain');
 // });
 
-Route::resource('/DataOne','DataOneController');
-Route::resource('/Data2','DataTwoController');
+Route::resource('/Kijang_Emas','DataOneController');
+Route::resource('/OPR','DataTwoController');
+Route::resource('/kl_usd_reference_rate','DataThreeController');
 // ->middleware(CheckAPI::class);

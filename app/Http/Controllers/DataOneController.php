@@ -52,19 +52,18 @@ class DataOneController extends Controller
         // echo $request->getStatusCode();
         
         $client = new Client();
-        $result = $client->get('https://api.bnm.gov.my/public/opr', [
-            'headers' => [
-                'Accept' => 'application/vnd.BNM.API.v1+json',
-                'Content-Type' => 'application/json',
-            ],
-        ]);
-
-        echo $result->getStatusCode();
-        echo $result->getBody();
+        // $client->request('GET', 'https://api.bnm.gov.my/public/kijang-emas', [
+        //     'headers' => [
+        //         'Accept' => 'application/vnd.BNM.API.v1+json',
+        //     ]
+        // ]);
+        // dd($client->getBody()->getContents());
+        $result = $client->get('https://raw.githubusercontent.com/amalinafz/assmnt/master/database/data/kijang_emas.json');
         if ($result->getStatusCode() == 200) { // 200 OK
-        $response_data = $result->getBody()->getContents();
+        $data = $result->getBody()->getContents();
         }
-        dd($response_data);
+
+        dd($data);
         // $data=$result->getBody()->getContents();
         // $data = $result->getBody()->getContents();
         // $data = iconv("ISO-8859-1","UTF-8",$data);
@@ -80,7 +79,8 @@ class DataOneController extends Controller
         //         'Accept' => 'application/vnd.BNM.API.v1+json',
         //     ],
         // ]);
-        return view('Data1');
+        
+        return view('Data1', compact('data'));
     }
 
     /**

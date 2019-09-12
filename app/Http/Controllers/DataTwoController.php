@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\DataTwo;
 use Illuminate\Http\Request;
 use database;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client; 
+use GuzzleHttp\Psr7;
 
 class DataTwoController extends Controller
 {
@@ -15,11 +18,13 @@ class DataTwoController extends Controller
      */
     public function index()
     {
-        $path = file_get_contents(base_path('./opr.json'));
-        // '/database/data/opr.json';
-        $content = json_decode(file_get_contents($path), true);
-        print_r($content);
-        // dd($content);
+        $client = new Client();
+        $result = $client->get('https://raw.githubusercontent.com/amalinafz/assmnt/master/database/data/opr.json');
+        if ($result->getStatusCode() == 200) { // 200 OK
+        $data = $result->getBody()->getContents();
+        }
+        dd($data);
+        return view('Data3', compact('data'));
     }
 
     /**
