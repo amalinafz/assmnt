@@ -22,4 +22,5 @@ Route::get('/', function () {
 // });
 
 Route::resource('/DataOne','DataOneController');
+Route::resource('/Data2','DataTwoController');
 // ->middleware(CheckAPI::class);

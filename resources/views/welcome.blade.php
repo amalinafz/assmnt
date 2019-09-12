@@ -85,7 +85,7 @@
 
                 <div class="links">
                     <a href="/DataOne">DataOne</a>
-                    <a href="https://laracasts.com">DataTwo</a>
+                    <a href="/Data2">DataTwo</a>
                     <a href="https://laravel-news.com">Data3</a>
 
                 </div>
