@@ -22,21 +22,20 @@ class DataOneController extends Controller
         // $url="https://api.bnm.gov.my/public/kijang-emas";
         // $test=$url->header('Accept', 'application/vnd.BNM.API.v1+json');
         // dd($test);
-        $headers = ['Accept' => 'application/vnd.BNM.API.v1+jso'];
-        $request = new Psr7\Request('GET', 'https://api.bnm.gov.my/public/opr', $headers);
-        // dd($request);
+        // $headers = ['Accept' => 'application/vnd.BNM.API.v1+jso'];
+        // $request = new Psr7\Request('GET', 'https://api.bnm.gov.my/public/opr', $headers);
+        // // dd($request);
         
 
-        $client = new Client([
-            'base_uri' =>'https://api.bnm.gov.my/public',
-        ]); 
-        $result = $client->request('GET', '/opr');
-        $body = $result->getBody()->getContents();
-        $body = iconv("ISO-8859-1","UTF-8",$body);
-        $data = json_decode($request->getBody()->getContents(), true);
-        // return $result;
-        // $body = $result->getBody();
-        dd($data);
+        // $client = new Client([
+        //     'base_uri' =>'https://api.bnm.gov.my/public',
+        // ]); 
+        // $result = $client->request('GET', '/opr');
+        // $body = $result->getBody()->getContents();
+        // $data = json_decode($request->getBody()->getContents(), true);
+        // // return $result;
+        // // $body = $result->getBody();
+        // dd($data);
         // echo $result->getBody();
         // $client = new Client();
         // $result = $client->get('https://ghibliapi.herokuapp.com/films', [
@@ -52,20 +51,20 @@ class DataOneController extends Controller
         // ])
         // echo $request->getStatusCode();
         
-        // $client = new Client();
-        // $result = $client->get('https://api.bnm.gov.my/public/opr', [
-        //     'headers' => [
-        //         'Accept' => 'application/vnd.BNM.API.v1+json',
-        //         'Content-Type' => 'application/json',
-        //     ],
-        // ]);
+        $client = new Client();
+        $result = $client->get('https://api.bnm.gov.my/public/opr', [
+            'headers' => [
+                'Accept' => 'application/vnd.BNM.API.v1+json',
+                'Content-Type' => 'application/json',
+            ],
+        ]);
 
-        // echo $result->getStatusCode();
-        // echo $result->getBody();
-        // if ($result->getStatusCode() == 200) { // 200 OK
-        // $response_data = $result->getBody()->getContents();
-        // }
-        // dd($response_data);
+        echo $result->getStatusCode();
+        echo $result->getBody();
+        if ($result->getStatusCode() == 200) { // 200 OK
+        $response_data = $result->getBody()->getContents();
+        }
+        dd($response_data);
         // $data=$result->getBody()->getContents();
         // $data = $result->getBody()->getContents();
         // $data = iconv("ISO-8859-1","UTF-8",$data);
